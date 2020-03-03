@@ -4,9 +4,7 @@ DROP DATABASE IF EXISTS tracker_test;
 CREATE DATABASE tracker_dev;
 CREATE DATABASE tracker_test;
 
-DROP USER IF EXISTS 'tracker';
-CREATE USER 'tracker'@'%' IDENTIFIED BY '';
+CREATE USER IF NOT EXISTS 'tracker'@'%'
+  IDENTIFIED BY '';
 GRANT ALL PRIVILEGES ON tracker_dev.* TO 'tracker' @'%';
 GRANT ALL PRIVILEGES ON tracker_test.* TO 'tracker' @'%';
-
- 
