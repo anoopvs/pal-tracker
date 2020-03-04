@@ -54,13 +54,13 @@ public class TimeEntryApiTest {
 
         assertThat(listResponse.getStatusCode()).isEqualTo(HttpStatus.OK);
 
-//        DocumentContext listJson = parse(listResponse.getBody());
-//
-//        Collection timeEntries = listJson.read("$[*]", Collection.class);
-//        assertThat(timeEntries.size()).isEqualTo(1);
-//
-//        Long readId = listJson.read("$[0].id", Long.class);
-//        assertThat(readId).isEqualTo(id);
+        DocumentContext listJson = parse(listResponse.getBody());
+
+        Collection timeEntries = listJson.read("$[*]", Collection.class);
+        assertThat(timeEntries.size()).isEqualTo(1);
+
+        Long readId = listJson.read("$[0].id", Long.class);
+        assertThat(readId).isEqualTo(id);
     }
 
     @Test
