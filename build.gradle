@@ -13,6 +13,7 @@ buildscript {
     // we need the spring boot plugin to run the build script
     dependencies {
         classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+        classpath("mysql:mysql-connector-java:8.0.13") 
     }
 }
 plugins {
