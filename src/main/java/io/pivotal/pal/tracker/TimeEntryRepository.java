@@ -1,6 +1,5 @@
 package io.pivotal.pal.tracker;
 
-import java.util.Collection;
 import java.util.List;
 
 import io.pivotal.pal.tracker.TimeEntry;
