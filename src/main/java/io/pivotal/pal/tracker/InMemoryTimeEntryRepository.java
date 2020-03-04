@@ -13,7 +13,7 @@ public class InMemoryTimeEntryRepository implements TimeEntryRepository {
 	Map <Long,TimeEntry> db= new HashMap<>();
 	
 	@Override
-	public TimeEntry find(long timeEntryId) {
+	public TimeEntry find(Long timeEntryId) {
 		return db.get(timeEntryId);
 	}
 
@@ -23,7 +23,7 @@ public class InMemoryTimeEntryRepository implements TimeEntryRepository {
 	}
 
 	@Override
-	public TimeEntry update(long eq, TimeEntry any) {
+	public TimeEntry update(Long eq, TimeEntry any) {
 		if(db.containsKey(eq)){
 			any.setId(eq);
 			db.put(eq, any);
@@ -34,7 +34,7 @@ public class InMemoryTimeEntryRepository implements TimeEntryRepository {
 	}
 
 	@Override
-	public void delete(long timeEntryId) {
+	public void delete(Long timeEntryId) {
 		db.remove(timeEntryId);
 		
 	}
